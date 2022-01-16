@@ -1,5 +1,4 @@
 import pandas as pd
-import csv
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
@@ -19,11 +18,8 @@ def main():
     judul=[]
     channel_name=[]
     publish=[]
-    date_published=[]
 
     id = 1
-
-    meta = soup.find_all("meta")
 
     for a in soup.findAll('div', class_='text-wrapper style-scope ytd-video-renderer')[:30]:
         titles = a.find('yt-formatted-string', class_='style-scope ytd-video-renderer')
@@ -47,3 +43,4 @@ def main():
     cv.to_csv('youtube.csv', index=False, encoding='utf-8')
 
 main()
+
