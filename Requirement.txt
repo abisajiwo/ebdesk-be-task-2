@@ -1,0 +1,4 @@
+1. Selenium
+2. bs4 (BeatifulSoup)
+3. webdriver_manager.chrome
+4. lxml
